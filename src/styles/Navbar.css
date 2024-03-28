@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    /* background-color:rgb(238, 240, 233); */
+  
+}
+
+img{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    width: 121px;
+    margin: 0px 0px -3px -10px;
+    cursor: pointer;
+}
+.logo-img{
+    height: 32px;
+    margin: 0 20px;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    width: 80%;
+  
+}
+.flights,
+.hotels,
+.trains,
+.cabs,
+.bus,
+.holidays,
+.forex,
+.login{
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    padding: 12px 15px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.login{
+    /* border: 1px solid rgb(117, 117, 211); */
+    border-radius: 50px;
+}
+
+
+/*flight page*/
