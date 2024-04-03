@@ -11,7 +11,7 @@ function Navbar() {
 
     return (
         <nav className='navbar'>
-            <Link to="/"><img className='logo-img' src={logo} /></Link>
+            <Link to="/flights"><img className='logo-img' src={logo} /></Link>
             <ul className='nav-links'>
                 <Link to="/flights" className='flights'>
                     <li>Flights</li>

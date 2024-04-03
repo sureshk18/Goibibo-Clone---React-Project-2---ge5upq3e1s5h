@@ -3,12 +3,15 @@ import addvert from "../assests/addvert.jpg";
 import background from "../assests/background.svg";
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from "react-router-dom";
 
 
 
 const OffersForYou = () => {
     const [userData, setUserData] = useState([]);
     const [showData, setShowData] = useState(false);
+    const navigate = useNavigate()
+
     const Flights = async () => {
         try {
             const response = await axios.get('https://academics.newtonschool.co/api/v1/bookingportals/offers', {
@@ -28,12 +31,13 @@ const OffersForYou = () => {
         Flights()
     }, []);
 
-    const onChange = () => {
-        if (showData == true) {
-            setShowData(false)
-        } else {
-            setShowData(true)
-        }
+    const searchFlight = () => {
+        // if (showData == true) {
+        //     setShowData(false)
+        // } else {
+        //     setShowData(true)
+        // }
+        navigate('/searchFlight')
     }
 
     return (
@@ -105,14 +109,10 @@ const OffersForYou = () => {
 
                         </div>
                     </div>
-                    <button className="kwEZmw dMpVqc flight-search-btn" onClick={onChange}>SEARCH FLIGHTS</button>
-                    {
-                        userData.map((offers, index) => {
-                            return (
-                                <p>{offers.lobDisplayText}</p>
-                            )
-                        })
-                    }
+                    <button className="fly flyt flight-search-btn" onClick={searchFlight}>SEARCH FLIGHTS</button>
+                    {/* {showData &&
+                        <p>Hi, suresh choudhary</p>
+                    } */}
                 </div>
                 <div className="add-first-some">
                     <img className="add_some_img" src={addvert} alt="other-image" />

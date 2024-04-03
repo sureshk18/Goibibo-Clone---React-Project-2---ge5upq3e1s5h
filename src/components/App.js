@@ -11,6 +11,7 @@ import Bus from "../pages/Bus";
 import Holidays from "../pages/Holidays";
 import Forex from "../pages/Forex";
 import Login from "../pages/Login";
+import SearchFlightData from '../search/SearchFlightData';
 
 function App() {
   return <div >
@@ -18,7 +19,7 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/" element={<goibibo />}></Route>
+          <Route path="/goibibo" element={<goibibo />}></Route>
           <Route path="/flights" element={<Flights />}></Route>
           <Route path="/hotels" element={<Hotels />}></Route>
           <Route path="/trains" element={<Trains />}></Route>
@@ -26,7 +27,9 @@ function App() {
           <Route path="/bus" element={<Bus />}></Route>
           <Route path="/holidays" element={<Holidays />}></Route>
           <Route path="/forex" element={<Forex />}></Route>
-          <Route path="/login" element={<Login />}></Route>/
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/searchflight" element={<SearchFlightData />}></Route>
+
         </Routes>
       </BrowserRouter>
     </>
