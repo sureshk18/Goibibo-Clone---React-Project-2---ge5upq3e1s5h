@@ -71,10 +71,10 @@ const Navbar = () => {
             <img src={bus} alt="bus" className="h-5" />
             Bus
           </Link>
-          <Link className={`cursor-pointer px-2 py-3 font-bold flex items-center gap-1 text-gray-500 ${activeTab === 5 && 'border-b-2 border-sky-500'}`} onClick={() => setActiveTab(5)} to="/cab">
+          {/* <Link className={`cursor-pointer px-2 py-3 font-bold flex items-center gap-1 text-gray-500 ${activeTab === 5 && 'border-b-2 border-sky-500'}`} onClick={() => setActiveTab(5)} to="/cab">
             <img src={cab} alt="cab" className="h-5" />
             Cab
-          </Link>
+          </Link> */}
           <div className={`${isLoggedIn ? "cursor-pointer" : "cursor-not-allowed"} px-2 py-3 font-bold flex items-center gap-1 text-gray-500 ${activeTab === 6 && 'border-b-2 border-sky-500'}`} onClick={handleTripClick}>
             <img src={manage} alt="book" className="h-6" />
             Manage Booking (My Trips)
