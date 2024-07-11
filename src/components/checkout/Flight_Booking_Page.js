@@ -22,7 +22,7 @@ import { setShowLoginSignupForm } from "../../utils/redux/authSlice";
 import {useMediaQuery} from '@mui/material';
 
 const Flight_Booking_Page = () => {
-  const isLoggedIn=useSelector((store)=>store.auth.isLoggedIn);
+  // const isLoggedIn=useSelector((store)=>store.auth.isLoggedIn);
   const { data } = useParams();
   const details = JSON.parse(decodeURIComponent(data));
     // console.log(details);
@@ -134,17 +134,14 @@ const Flight_Booking_Page = () => {
     const encodedFlightBody = encodeURIComponent(JSON.stringify(flightData));
     dispatch(setAmount(getTotalFare()));
     navigate(`/payment/${encodedFlightBody}`);
-    // setBookingFunction({
-    //   bookingFunction: bookBus.bind(null, bus_id, depDate, arrDate),
-    // });
   }
 
-  useEffect(()=>{
-    if(!isLoggedIn){
-      navigate("/");
-      dispatch(setShowLoginSignupForm(true))
-    }
-  },[isLoggedIn])
+  // useEffect(()=>{
+  //   if(!isLoggedIn){
+  //     navigate("/");
+  //     dispatch(setShowLoginSignupForm(true))
+  //   }
+  // },[isLoggedIn])
 
   return (
     <Box sx={{ width: "100%" }}>
