@@ -70,7 +70,7 @@ const Hotel_Page = () => {
 
   return (
     <div className="">
-      <div className="absolute h-3/4 w-full rounded-full bg-orange-500 -top-1/4"></div>
+      <div className="absolute h-3/4 w-full bg-orange-500 -top-1/4"></div>
       <div className="w-10/12 m-auto pb-5">
         <h1 className="font-bold text-2xl my-4 relative text-white z-20">
           Book Hotels & Homestays

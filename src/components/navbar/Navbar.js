@@ -6,8 +6,7 @@ import plane from "../../assets/plane.png";
 import hotel from "../../assets/hotel.png";
 import train from "../../assets/train.png";
 import bus from "../../assets/bus.png";
-import cab from '../../assets/cab.png';
-import manage from "../../assets/manage.png";
+// import manage from "../../assets/manage.png";
 import { useDispatch, useSelector } from "react-redux";
 import { setIsLoggedIn, setShowLoginSignupForm } from "../../utils/redux/authSlice";
 import { Link, useNavigate } from "react-router-dom";
@@ -46,7 +45,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className="bg-white flex items-center justify-between w-full p-2 z-50 relative" >
+    <div className="bg-white flex items-center justify-between w-full p-1 z-50 relative "  >
       <div className={`${smallScreen && "flex justify-center"}`}>
         <div onClick={handleToggle}>
           {smallScreen && <MenuIcon sx={{ color: "orange", marginLeft: "4px" }} />}
@@ -71,14 +70,10 @@ const Navbar = () => {
             <img src={bus} alt="bus" className="h-5" />
             Bus
           </Link>
-          {/* <Link className={`cursor-pointer px-2 py-3 font-bold flex items-center gap-1 text-gray-500 ${activeTab === 5 && 'border-b-2 border-sky-500'}`} onClick={() => setActiveTab(5)} to="/cab">
-            <img src={cab} alt="cab" className="h-5" />
-            Cab
-          </Link> */}
-          <div className={`${isLoggedIn ? "cursor-pointer" : "cursor-not-allowed"} px-2 py-3 font-bold flex items-center gap-1 text-gray-500 ${activeTab === 6 && 'border-b-2 border-sky-500'}`} onClick={handleTripClick}>
+          {/* <div className={`${isLoggedIn ? "cursor-pointer" : "cursor-not-allowed"} px-2 py-3 font-bold flex items-center gap-1 text-gray-500 ${activeTab === 6 && 'border-b-2 border-sky-500'}`} onClick={handleTripClick}>
             <img src={manage} alt="book" className="h-6" />
             Manage Booking (My Trips)
-          </div>
+          </div> */}
         </ul>}
 
       {isLoggedIn == false ? (<button className="border border-blue-500 rounded-lg py-1.5 px-1.5 text-black-500 mr-3 " onClick={handleLoginClick}>

@@ -81,7 +81,7 @@ const Bus_Page = () => {
   }, []);
   return (
     <div className="">
-      <div className={smallScreen ?"absolute h-[300px] w-full rounded-full bg-blue-500 -top-[3%] ":"absolute h-[900px] w-[1050px] rounded-full bg-blue-500 -top-[70%] -left-[7%]"}></div>
+      <div className={smallScreen ?"absolute h-[300px] w-full bg-blue-500 -top-[3%] ":"absolute h-[780px] w-[1350px] bg-blue-500 -top-[70%] -left-[7%]"}></div>
       <div className="w-10/12 m-auto ">
         <h1 className="font-bold text-2xl my-4 relative text-white z-20">
           Bus Ticket Booking
