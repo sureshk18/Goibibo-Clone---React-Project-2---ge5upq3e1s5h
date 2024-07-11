@@ -28,7 +28,7 @@ import {useMediaQuery} from '@mui/material';
   export default function Payment() {
     // const { bookingFunction, paymentIsPending, setPaymentisPending, amount } =
     //   usePaymentContext();
-    const isLoggedIn=useSelector((store)=>store.auth.isLoggedIn);
+    // const isLoggedIn=useSelector((store)=>store.auth.isLoggedIn);
     const amount=useSelector((store)=>store.payment.amount);
     const navigate = useNavigate();
     const { body } = useParams();
@@ -183,12 +183,12 @@ import {useMediaQuery} from '@mui/material';
         unLoad();
       };
     }, []);
-    useEffect(()=>{
-      if(!isLoggedIn){
-        navigate("/");
-        dispatch(setShowLoginSignupForm(true))
-      }
-    },[isLoggedIn])
+    // useEffect(()=>{
+    //   if(!isLoggedIn){
+    //     navigate("/");
+    //     dispatch(setShowLoginSignupForm(true))
+    //   }
+    // },[isLoggedIn])
     const mins = ("" + Math.floor(time / 60)).padStart(2, "0");
     const secs = ("" + (time % 60)).padStart(2, "0");
     return (

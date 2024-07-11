@@ -45,7 +45,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className="bg-white flex items-center justify-between w-full p-1 z-50 relative "  >
+    <div className="bg-white flex items-center text-base justify-between w-full p-0 z-50 sticky top-0 "  >
       <div className={`${smallScreen && "flex justify-center"}`}>
         <div onClick={handleToggle}>
           {smallScreen && <MenuIcon sx={{ color: "orange", marginLeft: "4px" }} />}
