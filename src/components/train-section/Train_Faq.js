@@ -9,7 +9,7 @@ const Train_Faq = () => {
   return (
     <div className="">
       <h1 className="text-4xl font-bold my-5">Train Ticket Booking FAQs</h1>
-      <Accordion sx={{ padding: "30px 20px" }}>
+      <Accordion sx={{ padding: "5px 5px" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2-content"
@@ -51,7 +51,7 @@ const Train_Faq = () => {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion sx={{ padding: "30px 20px", marginTop: "20px" }}>
+      <Accordion sx={{ padding: "5px 5px", marginTop: "20px" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2-content"
@@ -75,7 +75,7 @@ const Train_Faq = () => {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion sx={{ padding: "30px 20px", marginTop: "20px" }}>
+      <Accordion sx={{ padding: "5px 5px", marginTop: "20px" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2-content"
@@ -102,7 +102,7 @@ const Train_Faq = () => {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion sx={{ padding: "30px 20px", marginTop: "20px" }}>
+      <Accordion sx={{ padding: "5px 5px", marginTop: "20px" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2-content"
@@ -128,7 +128,7 @@ const Train_Faq = () => {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion sx={{ padding: "30px 20px", marginTop: "20px" }}>
+      <Accordion sx={{ padding: "5px 5px", marginTop: "20px" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2-content"
@@ -147,7 +147,7 @@ const Train_Faq = () => {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion sx={{ padding: "30px 20px", marginTop: "20px" }}>
+      <Accordion sx={{ padding: "5px 5px", marginTop: "20px" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2-content"

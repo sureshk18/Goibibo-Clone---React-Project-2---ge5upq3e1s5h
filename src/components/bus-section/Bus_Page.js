@@ -144,8 +144,8 @@ const Bus_Page = () => {
             SEARCH BUS
           </button>
         </div>
-        <h3 className="mt-16 mb-4 text-2xl font-medium">Goverement Buses</h3>
-        <Goverment_Bus />
+        {/* <h3 className="mt-16 mb-4 text-2xl font-medium">Goverement Buses</h3>
+        <Goverment_Bus /> */}
         <p className="mt-16 mb-4 text-2xl font-medium">Bus Booking FAQ</p>
         <Bus_Faq />
       </div>

@@ -85,14 +85,14 @@ const Train_Page = () => {
             <img
               src={irctcLogo}
               alt="logo"
-              className="h-12 bg-white rounded-full z-20"
+              className="h-9 bg-white rounded-full z-20"
             />
-            <span className="font-bold text-2xl my-4 relative text-white z-20">
+            <span className="font-bold text-2xl my-6 relative text-white z-20">
               IRCTC Authorized Partner
             </span>
           </div>
         </div>
-        <div className="rounded-lg flex flex-col  bg-white shadow-md py-10 relative z-20">
+        <div className="rounded-lg flex flex-col  bg-white shadow-md py-12 relative z-20">
           <div className={`${smallScreen?"flex flex-col gap-2":"flex justify-around p-4"}`}>
             <div className={`${smallScreen?"w-full p-2":""}`}>
               <p>From</p>
@@ -149,7 +149,7 @@ const Train_Page = () => {
         </div>
         <div className="mt-20">
           <div className="flex flex-col items-center">
-            <h1 className="text-4xl font-bold">1 million+ customers</h1>
+            <h1 className="text-4xl font-bold">1 million + customers</h1>
             <p className="text-lg">book train tickets with us because</p>
           </div>
           {!smallScreen && <div className="flex justify-between mt-5">
