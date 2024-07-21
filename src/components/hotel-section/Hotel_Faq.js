@@ -281,9 +281,6 @@ const Hotel_Faq = () => {
         </div>
         <Divider />
       </div> */}
-
-    
-    
   </>
   )
 }

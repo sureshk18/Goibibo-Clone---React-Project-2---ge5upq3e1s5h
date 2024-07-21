@@ -31,6 +31,8 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import Stack from "@mui/material/Stack";
 import dayjs from "dayjs";
 import { useMediaQuery } from '@mui/material';
+import Checkbox from '@mui/material/Checkbox';
+
 
 const Flight_Page = () => {
   const source = useSelector((store) => store.flight.sourceSelectedAirport);
@@ -45,6 +47,7 @@ const Flight_Page = () => {
   const destinationRef = useRef();
   const navigate = useNavigate();
   const smallScreen = useMediaQuery('(max-width:650px)');
+  const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
   const getAllAirports = async () => {
     const apiUrl = baseUrl + "airport";
@@ -193,6 +196,36 @@ const Flight_Page = () => {
                   onChange={(date) => handleDateChange(date)}
                 />
               </LocalizationProvider>
+            </div>
+
+
+            {/* return date 
+            <div className={`${smallScreen && "mb-10 w-[95%] mx-auto"}`}>
+              <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <DatePicker
+                  label="return"
+                  disablePast
+                  reduceAnimations
+                  minDate={new dayjs()}
+                  maxDate={new dayjs().add("day").add("year")}
+                  value={depDate}
+                  onChange={(date) => handleDateChange(date)}
+                />
+              </LocalizationProvider>
+            </div>*/}
+          </div>
+          <div style={{ display: 'flex' }}>
+            <p style={{ border: '1px solid black', marginLeft: '10px' }}>
+              <p style={{ margin: '0px 0px ', fontSize: '13px' }}> <Checkbox {...label}/><strong>Student </strong><span>Extra Baggage</span></p>
+            </p>
+            <div style={{ border: '1px solid black', marginLeft: '10px' }}>
+              <p style={{ margin: '0px 0px ', fontSize: '13px' }}> <Checkbox {...label}/><strong>Senior Citizen</strong> <span>Exclusive Discounts</span></p>
+            </div>
+            <div style={{ border: '1px solid black', marginLeft: '10px' }}>
+              <p style={{ margin: '0px 0px ', fontSize: '13px' }}> <Checkbox {...label}/><strong>Armed Forces</strong> <span>Exclusive Discounts</span></p>
+            </div>
+            <div style={{ border: '1px solid black', marginLeft: '10px' }}>
+              <p style={{ margin: '0px 0px ', fontSize: '13px' }}> <Checkbox {...label}/><strong>Doctors & Nurses</strong> <span>Exclusive Discounts</span></p>
             </div>
           </div>
           <button

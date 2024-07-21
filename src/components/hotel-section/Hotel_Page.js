@@ -11,6 +11,7 @@ import {useSelector,useDispatch} from "react-redux"
 import { setCheckInDate, setCheckOutDate, setSelectedCity } from "../../utils/redux/hotelSlice";
 import {useNavigate} from "react-router-dom";
 import {useMediaQuery} from '@mui/material';
+// import Rooms from '../hotel-section/Rooms';
 
 const Hotel_Page = () => {
   const [city, setCity] = useState([]);
@@ -123,10 +124,8 @@ const Hotel_Page = () => {
             />
           </LocalizationProvider>
           </div>
-          <div>
-
-          </div>
-          
+          {/* <Rooms/> */}
+         
 
           <button className={`text-white rounded-full absolute ${smallScreen?"left-[20%] -bottom-[7%]": "left-[25%] -bottom-[7%]"} z-20 bg-orange-600 py-4 px-8 font-bold text-xl`} onClick={handleClick}>
             SEARCH HOTELS
