@@ -22,7 +22,7 @@ import { setShowLoginSignupForm } from "../../utils/redux/authSlice";
 import {useMediaQuery} from '@mui/material';
 
 const Bus_Booking_Page = () => {
-  // const isLoggedIn=useSelector((store)=>store.auth.isLoggedIn);
+  const isLoggedIn=useSelector((store)=>store.auth.isLoggedIn);
   const { data } = useParams();
   const details = JSON.parse(decodeURIComponent(data));
   const nameRef = useRef();
@@ -132,12 +132,12 @@ const Bus_Booking_Page = () => {
     // });
   }
 
-  // useEffect(()=>{
-  //   if(!isLoggedIn){
-  //     navigate("/");
-  //     dispatch(setShowLoginSignupForm(true))
-  //   }
-  // },[isLoggedIn])
+  useEffect(()=>{
+    if(!isLoggedIn){
+      navigate("/");
+      dispatch(setShowLoginSignupForm(true))
+    }
+  },[isLoggedIn])
   return (
     <Box sx={{ width: "100%" }}>
       <Box

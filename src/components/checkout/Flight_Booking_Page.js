@@ -22,7 +22,7 @@ import { setShowLoginSignupForm } from "../../utils/redux/authSlice";
 import {useMediaQuery} from '@mui/material';
 
 const Flight_Booking_Page = () => {
-  // const isLoggedIn=useSelector((store)=>store.auth.isLoggedIn);
+  const isLoggedIn=useSelector((store)=>store.auth.isLoggedIn);
   const { data } = useParams();
   const details = JSON.parse(decodeURIComponent(data));
     // console.log(details);
@@ -136,12 +136,12 @@ const Flight_Booking_Page = () => {
     navigate(`/payment/${encodedFlightBody}`);
   }
 
-  // useEffect(()=>{
-  //   if(!isLoggedIn){
-  //     navigate("/");
-  //     dispatch(setShowLoginSignupForm(true))
-  //   }
-  // },[isLoggedIn])
+  useEffect(()=>{
+    if(!isLoggedIn){
+      navigate("/");
+      dispatch(setShowLoginSignupForm(true))
+    }
+  },[isLoggedIn])
 
   return (
     <Box sx={{ width: "100%" }}>
